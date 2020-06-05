@@ -22,10 +22,11 @@ public $blocksmined = 0;
 public function onBlockBreakEvent(BlockBreakEvent $event) {
       $player = $event->getPlayer();
       $item = $player->getInventory()->getItemInHand();
-      $pickaxe = item::get(278, 0, 1);
+      $dpickaxe = item::get(278, 0, 1);
       $this->blocksmined() + 1;
-      if($item->getId() == $pickaxe) {
-         $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $this->blocksmined()"]);
+      if($item->getId() == $dpickaxe) {
+         $broken = $this->blocksmined();
+         $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $broken"]);
       }
    }
 }
