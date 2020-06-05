@@ -14,10 +14,8 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
 use pocketmine\event\player\PlayerJoinEvent;
 
-
 class Break extends PluginBase {
  
-
 public $blocksmined = 0;
 
 public function onBlockBreakEvent(BlockBreakEvent $event) {
