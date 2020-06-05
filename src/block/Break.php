@@ -4,12 +4,11 @@ namespace block;
 
 use pocketmine\Server;
 use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\player\PlayerItemHeldEvent;
 
 
 class Main extends PluginBase {
-
-public funtion onEnable() {
-}
+ 
 
 public $blocksmined = 0;
 
