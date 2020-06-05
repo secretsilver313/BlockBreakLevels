@@ -5,34 +5,27 @@ namespace block;
 use pocketmine\Server;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\item\Item;
+use pocketmine\Player;
+use pocketmine\inventory\Inventory;
+use pocketmine\item\Armor;
+use pocketmine\item\Tool;
+use pocketmine\command\CommandSender;
+use pocketmine\command\PluginCommand;
+use pocketmine\event\player\PlayerJoinEvent;
 
-
-class Main extends PluginBase {
+class Break extends PluginBase {
  
-
 public $blocksmined = 0;
 
- onItemHeldEvent(itemHeldEvent $event) {
- 
- $player = $event->getPlayer();
-  $item = $player->getInventory()->getItemInHand()->getId();
-  $pickaxe = item::get(278, 0, 1);
-  $setlore = $player->getInventory()->getItemInHand->setLore(["0"]);
-  $blocksmine = 0;
-
-  if($player $item == $pickaxe) {
-  $player->getInventory()->getItemInHand->setLore(["Pickaxe Level: 0 \n  Blocks Mined: $blocksmined "])
-  }else{
-  }
-
- onBlockBreakEvent(blockBreakEvent $event) {
- 
-  $player = $event->getPlayer();
-  $pickaxe = item::get(278, 0, 1)
-  $inv = $player->getInventory();
-  $item = $player->getInventory()->getItemInHand()->getId();
-  $plore = $player->getlore
-
-  $this->$blocksmined() +1
- }
+public function onBlockBreakEvent(BlockBreakEvent $event) {
+      $player = $event->getPlayer();
+      $item = $player->getInventory()->getItemInHand()->getId();
+      $pickaxe = item::get(278, 0, 1);
+      $this->blocksmined() + 1;
+      if($item == $pickaxe) {
+         $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $this->blocksmined()"]);
+      }
+   }
 }
+          
