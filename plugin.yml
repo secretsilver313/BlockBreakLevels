@@ -1,6 +1,6 @@
 name: BlockBreak
 main: block\Break
-api: 3.0.0
+api: [3.0.0, 4.0.0]
 author: secretsilver313
 version: 1.0.0
 description: "A block break plugin"
