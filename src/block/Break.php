@@ -27,6 +27,6 @@ public function onBlockBreakEvent(BlockBreakEvent $event) {
       if($item == $pickaxe) {
          $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $this->blocksmined()"]);
       }
+   }
 }
-
           
