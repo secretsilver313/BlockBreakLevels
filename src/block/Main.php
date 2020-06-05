@@ -13,6 +13,7 @@ use pocketmine\item\Tool;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase {
  
