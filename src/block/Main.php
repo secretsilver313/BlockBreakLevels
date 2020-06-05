@@ -17,7 +17,7 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase {
  
-public $blocksmined = 0;
+private $blocksmined = 0;
 
 public function onBlockBreakEvent(BlockBreakEvent $event) {
       $player = $event->getPlayer();
