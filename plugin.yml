@@ -1,6 +1,6 @@
 name: BlockBreak
-main: block\Break
+main: block\Main
 api: [3.0.0, 4.0.0]
-author: secretsilver313
+author: secretsilver313, esh123cookie
 version: 1.0.0
 description: "A block break plugin"
