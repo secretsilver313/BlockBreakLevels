@@ -22,7 +22,6 @@ public function onBlockBreakEvent(BlockBreakEvent $event) {
       $player = $event->getPlayer();
       $item = $player->getInventory()->getItemInHand()->getId();
       $pickaxe = item::get(278, 0, 1);
-      $setlore = $player->getInventory()->getItemInHand->setLore(["0"]);
       $this->blocksmined() + 1;
       if($item == $pickaxe) {
          $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $this->blocksmined()"]);
