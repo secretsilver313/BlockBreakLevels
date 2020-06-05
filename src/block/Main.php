@@ -17,15 +17,18 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase {
  
-private $blocksmined = 0;
+ public $blocksmined = 0;
+
+ public function onEnable() {
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+ }
 
 public function onBlockBreakEvent(BlockBreakEvent $event) {
       $player = $event->getPlayer();
       $item = $player->getInventory()->getItemInHand();
       $dpickaxe = item::get(278, 0, 1);
-      $this->blocksmined() + 1;
       if($item->getId() == $dpickaxe->getId()) {
-         $broken = $this->blocksmined();
+         $broken = $this->blocksmined[$sender->getName()] + 1;
          $item->setLore(["Pickaxe Level: 0\nBlocks Mined: $broken"]);
       }
    }
