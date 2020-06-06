@@ -15,7 +15,7 @@ use pocketmine\command\PluginCommand;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
 
-class Main extends PluginBase {
+class Main extends PluginBase implements Listener {
  
  public $blocksmined = 0;
 
